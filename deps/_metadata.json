@@ -1,0 +1,136 @@
+{
+  "hash": "6b81e666",
+  "configHash": "f3600197",
+  "lockfileHash": "df7d6779",
+  "browserHash": "f0461bd3",
+  "optimized": {
+    "react": {
+      "src": "../../react/index.js",
+      "file": "react.js",
+      "fileHash": "c18bae92",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "498e584c",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "3700b6e7",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "c05422ec",
+      "needsInterop": true
+    },
+    "@dnd-kit/core": {
+      "src": "../../@dnd-kit/core/dist/core.esm.js",
+      "file": "@dnd-kit_core.js",
+      "fileHash": "fe89ef02",
+      "needsInterop": false
+    },
+    "@dnd-kit/sortable": {
+      "src": "../../@dnd-kit/sortable/dist/sortable.esm.js",
+      "file": "@dnd-kit_sortable.js",
+      "fileHash": "bfd17c6d",
+      "needsInterop": false
+    },
+    "@dnd-kit/utilities": {
+      "src": "../../@dnd-kit/utilities/dist/utilities.esm.js",
+      "file": "@dnd-kit_utilities.js",
+      "fileHash": "255f9ac4",
+      "needsInterop": false
+    },
+    "@fullcalendar/daygrid": {
+      "src": "../../@fullcalendar/daygrid/index.js",
+      "file": "@fullcalendar_daygrid.js",
+      "fileHash": "d31ee344",
+      "needsInterop": false
+    },
+    "@fullcalendar/interaction": {
+      "src": "../../@fullcalendar/interaction/index.js",
+      "file": "@fullcalendar_interaction.js",
+      "fileHash": "c464b424",
+      "needsInterop": false
+    },
+    "@fullcalendar/list": {
+      "src": "../../@fullcalendar/list/index.js",
+      "file": "@fullcalendar_list.js",
+      "fileHash": "1f048c03",
+      "needsInterop": false
+    },
+    "@fullcalendar/react": {
+      "src": "../../@fullcalendar/react/dist/index.js",
+      "file": "@fullcalendar_react.js",
+      "fileHash": "aaf52943",
+      "needsInterop": false
+    },
+    "@fullcalendar/timegrid": {
+      "src": "../../@fullcalendar/timegrid/index.js",
+      "file": "@fullcalendar_timegrid.js",
+      "fileHash": "5f57ed28",
+      "needsInterop": false
+    },
+    "date-fns": {
+      "src": "../../date-fns/index.js",
+      "file": "date-fns.js",
+      "fileHash": "c20d1111",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "af3c1002",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4d7993ce",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "af48d722",
+      "needsInterop": false
+    },
+    "recharts": {
+      "src": "../../recharts/es6/index.js",
+      "file": "recharts.js",
+      "fileHash": "496da746",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-Y5ZWL5NH": {
+      "file": "chunk-Y5ZWL5NH.js"
+    },
+    "chunk-YJZCGBGU": {
+      "file": "chunk-YJZCGBGU.js"
+    },
+    "chunk-YF4B4G2L": {
+      "file": "chunk-YF4B4G2L.js"
+    },
+    "chunk-WUR7D6NS": {
+      "file": "chunk-WUR7D6NS.js"
+    },
+    "chunk-RCSNZHMJ": {
+      "file": "chunk-RCSNZHMJ.js"
+    },
+    "chunk-T7UM46HU": {
+      "file": "chunk-T7UM46HU.js"
+    },
+    "chunk-42YB2EA7": {
+      "file": "chunk-42YB2EA7.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}
