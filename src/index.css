@@ -1,0 +1,338 @@
+@import "tailwindcss";
+
+/* Custom CSS Variables for GearGuard Theme */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+}
+
+/* Base Styles */
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+/* Skeleton Loading Animation */
+.skeleton {
+  @apply bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%];
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Card Hover Effects */
+.card-hover {
+  @apply transition-all duration-200;
+}
+
+.card-hover:hover {
+  @apply shadow-lg -translate-y-0.5;
+}
+
+/* Priority Badge Colors */
+.priority-low {
+  @apply bg-green-100 text-green-700 border-green-200;
+}
+
+.priority-medium {
+  @apply bg-yellow-100 text-yellow-700 border-yellow-200;
+}
+
+.priority-high {
+  @apply bg-red-100 text-red-700 border-red-200;
+}
+
+/* Status Colors */
+.status-new {
+  @apply bg-blue-100 text-blue-700;
+}
+
+.status-in-progress {
+  @apply bg-yellow-100 text-yellow-700;
+}
+
+.status-repaired {
+  @apply bg-green-100 text-green-700;
+}
+
+.status-scrap {
+  @apply bg-gray-100 text-gray-700;
+}
+
+/* Kanban Card Dragging */
+.dragging {
+  @apply opacity-50 scale-105 rotate-2 shadow-2xl;
+}
+
+/* Toast Notifications */
+.toast-container {
+  @apply fixed top-4 right-4 z-50 flex flex-col gap-2;
+}
+
+/* FullCalendar Custom Styles */
+.fc {
+  @apply bg-white rounded-xl shadow-sm;
+}
+
+.fc .fc-toolbar-title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.fc .fc-button-primary {
+  @apply bg-blue-600 border-blue-600;
+}
+
+.fc .fc-button-primary:hover {
+  @apply bg-blue-700 border-blue-700;
+}
+
+.fc .fc-button-primary:disabled {
+  @apply bg-blue-400 border-blue-400;
+}
+
+.fc .fc-event {
+  @apply cursor-pointer;
+}
+
+.fc .fc-daygrid-day:hover {
+  @apply bg-blue-50;
+}
+
+/* Form Input Focus States */
+input:focus, select:focus, textarea:focus {
+  @apply ring-2 ring-blue-500 ring-offset-0 outline-none;
+}
+
+/* Table Styles */
+.table-row-hover:hover {
+  @apply bg-gray-50;
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-40;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  @apply absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50;
+}
+
+/* Avatar Sizes */
+.avatar-sm { @apply w-8 h-8 text-xs; }
+.avatar-md { @apply w-10 h-10 text-sm; }
+.avatar-lg { @apply w-12 h-12 text-base; }
+
+/* Responsive Container */
+.container-app {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Kanban Column Colors */
+.bg-blue-50 { background-color: #eff6ff; }
+.bg-yellow-50 { background-color: #fefce8; }
+.bg-green-50 { background-color: #f0fdf4; }
+.bg-gray-50 { background-color: #f9fafb; }
+
+.border-blue-500 { border-color: #3b82f6; }
+.border-yellow-500 { border-color: #eab308; }
+.border-green-500 { border-color: #22c55e; }
+.border-gray-500 { border-color: #6b7280; }
+
+.text-blue-600 { color: #2563eb; }
+.text-yellow-600 { color: #ca8a04; }
+.text-green-600 { color: #16a34a; }
+.text-gray-600 { color: #4b5563; }
+
+.bg-blue-100 { background-color: #dbeafe; }
+.bg-yellow-100 { background-color: #fef9c3; }
+.bg-green-100 { background-color: #dcfce7; }
+.bg-gray-100 { background-color: #f3f4f6; }
+
+.text-blue-700 { color: #1d4ed8; }
+.text-yellow-700 { color: #a16207; }
+.text-green-700 { color: #15803d; }
+.text-gray-700 { color: #374151; }
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Pulse animation for notifications */
+.pulse-dot {
+  @apply relative;
+}
+
+.pulse-dot::after {
+  content: '';
+  @apply absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Custom scrollbar for kanban */
+.kanban-scroll::-webkit-scrollbar {
+  @apply h-3;
+}
+
+.kanban-scroll::-webkit-scrollbar-track {
+  @apply bg-gray-200 rounded-full;
+}
+
+.kanban-scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+/* Hover scale effect */
+.hover-scale {
+  @apply transition-transform duration-200;
+}
+
+.hover-scale:hover {
+  @apply scale-105;
+}
+
+/* Focus visible styles */
+.focus-ring:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin;
+}
+
+/* Slide animations */
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge shine effect */
+.badge-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255,255,255,0.3) 50%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
