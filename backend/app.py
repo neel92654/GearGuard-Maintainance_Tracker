@@ -1,6 +1,5 @@
-
-"GearGuard - Flask Backend API
-Maintenance Management System"
+"""GearGuard - Flask Backend API
+Maintenance Management System"""
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -339,4 +338,5 @@ if __name__ == "__main__":
     print("API available at: http://localhost:5000/api")
     print("Health check: http://localhost:5000/api/health")
     app.run(debug=True, host="0.0.0.0", port=5000)
+
 
