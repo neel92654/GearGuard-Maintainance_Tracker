@@ -1,9 +1,6 @@
-"""
-GearGuard - Flask Backend API
-Maintenance Management System
 
-Run with: python app.py
-"""
+"GearGuard - Flask Backend API
+Maintenance Management System"
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -16,9 +13,8 @@ app = Flask(__name__)
 # Enable CORS for all routes (allows React frontend to connect)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-# --------------------------------------------------
+
 # DATABASE CONNECTION
-# --------------------------------------------------
 def get_db():
     return mysql.connector.connect(
         host="localhost",
@@ -36,9 +32,8 @@ class CustomJSONEncoder(json.JSONEncoder):
 
 app.json_encoder = CustomJSONEncoder
 
-# --------------------------------------------------
+
 # HELPER: Convert MySQL row to JSON-safe dict
-# --------------------------------------------------
 def row_to_dict(row):
     if row is None:
         return None
@@ -50,9 +45,7 @@ def row_to_dict(row):
             result[key] = value
     return result
 
-# --------------------------------------------------
 # EQUIPMENT APIs
-# --------------------------------------------------
 
 @app.route("/api/equipment", methods=["GET"])
 def get_equipment():
@@ -93,9 +86,7 @@ def equipment_requests(eq_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # CREATE MAINTENANCE REQUEST
-# --------------------------------------------------
 
 @app.route("/api/requests", methods=["POST"])
 def create_request():
@@ -148,9 +139,7 @@ def create_request():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # KANBAN BOARD
-# --------------------------------------------------
 
 @app.route("/api/requests/kanban", methods=["GET"])
 def kanban_view():
@@ -185,9 +174,7 @@ def kanban_view():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # UPDATE STAGE (DRAG & DROP)
-# --------------------------------------------------
 
 @app.route("/api/requests/<int:req_id>/stage", methods=["PUT"])
 def update_stage(req_id):
@@ -230,9 +217,7 @@ def update_stage(req_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # COMPLETE REQUEST
-# --------------------------------------------------
 
 @app.route("/api/requests/<int:req_id>/complete", methods=["PUT"])
 def complete_request(req_id):
@@ -260,9 +245,7 @@ def complete_request(req_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # CALENDAR VIEW (PREVENTIVE)
-# --------------------------------------------------
 
 @app.route("/api/requests/calendar", methods=["GET"])
 def calendar_view():
@@ -281,9 +264,7 @@ def calendar_view():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # TECHNICIAN DASHBOARD
-# --------------------------------------------------
 
 @app.route("/api/technicians/<int:tech_id>/requests", methods=["GET"])
 def technician_tasks(tech_id):
@@ -301,9 +282,7 @@ def technician_tasks(tech_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # USERS API (for frontend compatibility)
-# --------------------------------------------------
 
 @app.route("/api/users", methods=["GET"])
 def get_users():
@@ -329,9 +308,7 @@ def get_user(user_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # TEAMS API
-# --------------------------------------------------
 
 @app.route("/api/teams", methods=["GET"])
 def get_teams():
@@ -345,9 +322,7 @@ def get_teams():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --------------------------------------------------
 # HEALTH CHECK
-# --------------------------------------------------
 
 @app.route("/api/health", methods=["GET"])
 def health_check():
@@ -358,11 +333,10 @@ def health_check():
     except Exception as e:
         return jsonify({"status": "unhealthy", "error": str(e)}), 500
 
-# --------------------------------------------------
 # RUN SERVER
-# --------------------------------------------------
 if __name__ == "__main__":
     print("Starting GearGuard API Server...")
     print("API available at: http://localhost:5000/api")
     print("Health check: http://localhost:5000/api/health")
     app.run(debug=True, host="0.0.0.0", port=5000)
+
