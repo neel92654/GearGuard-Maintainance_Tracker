@@ -7,3 +7,21 @@ To build a maintenance tracking module that allows:
 - Assignment of maintenance to teams and technicians
 - Handling of corrective and preventive maintenance requests
 - Visual task tracking using Kanban and Calendar views
+
+
+# Key Features
+- Equipment management with ownership and warranty details
+- Maintenance teams with assigned technicians
+- Corrective (breakdown) and preventive (scheduled) requests
+- Kanban board with drag-and-drop workflow stages
+- Calendar view for scheduled preventive maintenance
+- Smart button on equipment to view related maintenance requests
+- Scrap logic to mark equipment as unusable
+
+# Workflow Overview
+1. User creates a maintenance request
+2. Selecting equipment auto-fills the maintenance team
+3. Request starts in "New" stage
+4. Technician assigns and moves it to "In Progress"
+5. After repair, hours are logged and status moves to "Repaired"
+6. Preventive tasks appear on the calendar view
